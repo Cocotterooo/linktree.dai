@@ -1,6 +1,5 @@
 from enum import Enum
 
-from linktree_dai.styles.colors import Color
 from linktree_dai.styles.fonts import Font, FontWeight
 
 STYLESHEETS = [

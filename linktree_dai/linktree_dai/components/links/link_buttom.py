@@ -1,7 +1,6 @@
 import reflex as rx
 
 from linktree_dai.styles.styles import Size
-from linktree_dai.styles.colors import Color, TextColor
 
 from linktree_dai.pages.index.index_state import IndexState
 
@@ -47,10 +46,10 @@ def link_buttom(data:dict) -> rx.components:
             bg= IndexState.secondary_color,
             padding= Size.SMALL.value,
             border_radius= Size.DEFAULT.value,
-            border= f'2px solid {Color.ACCENT.value}',
+            border= f'2px solid {IndexState.accent_color}',
             color= IndexState.primary_color,
             _hover= {
-                'bg': Color.ACCENT.value,
+                'bg': IndexState.accent_color,
                 'transition': '0.4s'
             },
             width= '100%',

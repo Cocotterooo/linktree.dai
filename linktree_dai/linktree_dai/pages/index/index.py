@@ -3,7 +3,6 @@ import reflex as rx
 from linktree_dai.components.navbar.navbar import navbar
 from linktree_dai.components.header.header import header
 from linktree_dai.components.footer.footer import footer
-from linktree_dai.components.links.link_buttom import link_buttom
 from linktree_dai.components.links.links_column import links_column
 # Utils:
 from utils import INDEX_TITLE, INDEX_DESCRIPTION, PREVIEW

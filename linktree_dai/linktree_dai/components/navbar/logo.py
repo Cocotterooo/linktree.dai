@@ -2,7 +2,6 @@ import reflex as rx
 
 from linktree_dai.styles.styles import Size
 from linktree_dai.styles.fonts import Font
-from linktree_dai.styles.colors import TextColor
 
 def logo() -> rx.components:
     return rx.hstack(

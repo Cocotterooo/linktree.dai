@@ -2,8 +2,6 @@ import reflex as rx
 
 # Styles
 from linktree_dai.styles.styles import Size
-from linktree_dai.styles.colors import Color, TextColor
-from linktree_dai.styles.fonts import Font, FontWeight
 
 # Components
 from linktree_dai.components.navbar.logo import logo
@@ -30,13 +28,18 @@ def navbar() -> rx.components:
                 )
             ),
             style= {
-                'border': f'2px solid {IndexState.primary_color}',
+                'border': f'2px solid {rx.cond(IndexState.light_mode, IndexState.accent_color, IndexState.primary_color)}',
                 'border_radius': '16px',
+                'cursor': 'pointer'
             },
             bg= IndexState.secondary_color,
-            filter= 'brightness(0.9)',
+            filter= rx.cond(
+                IndexState.light_mode,
+                'brightness(1)',
+                'brightness(0.9)'
+            ),
             _hover= {
-                'filter': 'brightness(1)',
+                'filter': rx.cond(IndexState.light_mode, 'brightness(1.1)', 'brightness(1)'),
                 'transition': '0.3s'
             },
             height= '40px',
@@ -50,15 +53,15 @@ def navbar() -> rx.components:
             height='50px',
         ),
         align='center',
-        border_top= f'1px solid {Color.ACCENT.value}',
+        border_top= f'1px solid {IndexState.accent_color}',
         style= {
             'bg': f'{IndexState.secondary_color}F2', # 0.85 opacity
             'backdrop-filter': 'blur(20px)',
-        },
-        position= 'sticky',
-        z_index= '999',
-        top= '0',
-        width='100%',
-        padding_x= Size.MEDIUM_BIG.value,
-        padding_y= Size.SMALL.value
+            'position': 'sticky',
+            'z_index': '999',
+            'top': '0',
+            'width':'100%',
+            'padding_x': Size.MEDIUM_BIG.value,
+            'padding_y': Size.SMALL.value
+        }
     )

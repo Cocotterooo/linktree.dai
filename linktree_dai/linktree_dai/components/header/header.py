@@ -1,10 +1,11 @@
 import reflex as rx
 
 from linktree_dai.styles.styles import Size
-from linktree_dai.styles.colors import Color, TextColor
-from linktree_dai.styles.fonts import Font, FontWeight
 
 from linktree_dai.components.header.links_icons import links
+
+# State
+from linktree_dai.pages.index.index_state import IndexState
 
 
 def header():
@@ -14,7 +15,7 @@ def header():
                 src='/dai.webp',
                 size='8',
                 border_radius='100%',
-                border= f'4px solid {Color.ACCENT.value}',
+                border= f'4px solid {IndexState.accent_color}',
             ),
             rx.vstack(
                 rx.heading(
@@ -23,7 +24,7 @@ def header():
                 rx.text(
                     '@dai_uvigo',
                     font_weight= '300',
-                    color= TextColor.ACCENT.value,
+                    color= IndexState.accent_color,
                     size= '4',
                 ),
                 rx.tablet_and_desktop(

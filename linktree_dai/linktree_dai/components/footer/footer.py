@@ -1,10 +1,8 @@
 import reflex as rx
 
 from linktree_dai.styles.styles import Size
-from linktree_dai.styles.colors import TextColor
-from linktree_dai.styles.fonts import Font, FontWeight
 
-from linktree_dai.constants import DAI_WEB_URL
+from linktree_dai.constants import DAI_WEB_URL, GITHUB_REPO_URL
 
 from linktree_dai.pages.index.index_state import IndexState
 
@@ -21,14 +19,32 @@ def footer():
                 ),
                 rx.text(
                     ' Universidade de Vigo ',
-                    color= TextColor.ACCENT.value,
+                    color= IndexState.accent_color,
                 ),
                 rx.text(
-                    '- v1'
+                    ''
                 ),
                 color= IndexState.primary_color,
             ),
             href= DAI_WEB_URL,
+            is_external=True,
+            class_name='link',
+        ),
+        rx.link(
+            rx.hstack(
+                rx.image(
+                    src='/icons/white/social/github.svg',
+                ),
+                rx.text(
+                    'Delegación de Alumnos de Industriales',
+                ),
+                rx.text(
+                    ' v1',
+                    color= IndexState.accent_color,
+                ),
+                color= IndexState.primary_color,
+            ),
+            href= GITHUB_REPO_URL,
             is_external=True,
             class_name='link',
         ),
