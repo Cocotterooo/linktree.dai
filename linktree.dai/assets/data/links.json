@@ -1,0 +1,11 @@
+[
+    {
+        "title": "Página web de la DAI",
+        "description": "Información útil y servicios de la Delegación de Alumnos de Industriales.",
+        "light_icon": "/icons/white/social/web.svg",
+        "dark_icon": "/icons/blue/social/web.svg",
+        "alt": "Logo de Aplicación Web",
+        "url": "https://dai.uvigo.gal/",
+        "is_external": true
+    }
+]

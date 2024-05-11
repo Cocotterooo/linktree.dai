@@ -1,0 +1,16 @@
+
+.link {
+    text-decoration: none; /* Para eliminar el subrayado predeterminado */
+}
+
+.link:hover {
+    text-decoration: none; /* Para asegurarse de que el subrayado no aparezca en hover */
+}
+
+.link img.arrow {
+    transition: transform 0.3s ease;
+}
+
+.link:hover img.arrow {
+    transform: rotate(45deg); /* Ajusta el ángulo según necesites */
+}
