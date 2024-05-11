@@ -6,6 +6,6 @@
 
 
 ## Proyecto Linktree de la Delegación de Alumnos de la Escuela de Ingeniería Industrial (UVigo)
-
+![image](https://github.com/Cocotterooo/linktree.dai/assets/103317717/659e44ea-8a7e-454a-b30b-229c2bbbb95d)
 
 > La Delegación de Alumnos es el máximo órgano de representación estudiantil de la Escuela de Ingeniería Industrial. Somos un órgano oficial de la Universidad de Vigo formado por estudiantes.
