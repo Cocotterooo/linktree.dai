@@ -32,7 +32,7 @@ def header():
                 ),
                 padding_left= Size.DEFAULT.value,
             ),
-            padding_bottom= Size.DEFAULT.value,
+            align= 'center'
         ),
         rx.mobile_only(
             rx.hstack(
