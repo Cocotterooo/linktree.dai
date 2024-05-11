@@ -1,11 +1,35 @@
 [
     {
-        "title": "Página web de la DAI",
-        "description": "Información útil y servicios de la Delegación de Alumnos de Industriales.",
+        "title": "Nuestra Web",
+        "description": "Servicios e información útil para los estudiantes.",
         "light_icon": "/icons/white/social/web.svg",
         "dark_icon": "/icons/blue/social/web.svg",
-        "alt": "Logo de Aplicación Web",
-        "url": "https://dai.uvigo.gal/",
-        "is_external": true
+        "alt": "Logotipo de Aplicación Web",
+        "url": "https://dai.uvigo.gal",
+        "is_external": true,
+        "is_social_media": false,
+        "is_active": true
+    },
+    {
+        "title": "Instagram",
+        "description": "Síguenos en Instagram para ver lo más destacado.",
+        "light_icon": "/icons/white/social/instagram.svg",
+        "dark_icon": "/icons/blue/social/instagram.svg",
+        "alt": "Logotipo de Instagram",
+        "url": "https://www.instagram.com/dai_uvigo",
+        "is_external": true,
+        "is_social_media": true,
+        "is_active": true
+    },
+    {
+        "title": "Twitter / X",
+        "description": "Síguenos en Twitter para estar al día de todo.",
+        "light_icon": "/icons/white/social/x.svg",
+        "dark_icon": "/icons/blue/social/x.svg",
+        "alt": "Logotipo de Twitter / X",
+        "url": "https://twitter.com/dai_uvigo",
+        "is_external": true,
+        "is_social_media": true,
+        "is_active": true
     }
 ]

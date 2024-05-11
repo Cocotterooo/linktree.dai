@@ -6,6 +6,8 @@ from linktree_dai.styles.fonts import Font, FontWeight
 
 from linktree_dai.constants import DAI_WEB_URL
 
+from linktree_dai.pages.index.index_state import IndexState
+
 def footer():
     return rx.vstack(
         rx.image(
@@ -15,17 +17,16 @@ def footer():
         rx.link(
             rx.hstack(
                 rx.text(
-                    '© 2024 DAI -',
-                    color= TextColor.PRIMARY.value,
+                    '© 2024 DAI -'
                 ),
                 rx.text(
                     ' Universidade de Vigo ',
                     color= TextColor.ACCENT.value,
                 ),
                 rx.text(
-                    '- v1',
-                    color= TextColor.PRIMARY.value,
-                )
+                    '- v1'
+                ),
+                color= IndexState.primary_color,
             ),
             href= DAI_WEB_URL,
             is_external=True,

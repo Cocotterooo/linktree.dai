@@ -12,15 +12,14 @@ from linktree_dai.styles.styles import Size
 
 from linktree_dai.data.LinkData import links_references
 # State:
-#from linktree_dai.pages.index.index_state import IndexState
+from linktree_dai.pages.index.index_state import IndexState
 
-#rx.foreach(MyState.items, item_component)
 
 @rx.page(
-    title=INDEX_TITLE,
-    description=INDEX_DESCRIPTION,
-    image=PREVIEW,
-    #on_load=[IndexState]
+    title= INDEX_TITLE,
+    description= INDEX_DESCRIPTION,
+    image= PREVIEW,
+    on_load= IndexState.toggle_theme,
 )
 def index() -> rx.Component:
     return rx.box(
@@ -34,8 +33,13 @@ def index() -> rx.Component:
                 padding_x=Size.MEDIUM_BIG.value,
             )
         ),
+        background= rx.cond(
+                IndexState.light_mode,
+                "center/cover url('/Tema_claro.png')",
+                "center/cover url('/Tema_oscuro.png')",
+            ),
         style={
-            "background_image": "url('/Tema_claro.png')",
+            #"background_image": "url('/Tema_claro.png')",
             "background_size": "cover",
             "background_repeat": "no-repeat",
             "background_attachment": "fixed",
@@ -43,5 +47,6 @@ def index() -> rx.Component:
             "width": "100%",
             "height": "100%",
             "min_height": "100vh",
+            'color': IndexState.primary_color
         }
     )

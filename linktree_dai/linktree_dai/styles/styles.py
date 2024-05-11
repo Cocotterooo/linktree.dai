@@ -15,7 +15,7 @@ BASE_STYLE = {
     'font_size': '16px',
     'font_family': Font.DEFAULT.value,
     'font_weight': FontWeight.LIGHT.value,
-    'color': Color.PRIMARY.value,
+    #'color': Color.PRIMARY.value,
     '::selection': {
         'background_color': 'rgba(0, 172, 226, 0.3)',
     }

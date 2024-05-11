@@ -6,7 +6,6 @@ from linktree_dai.styles.fonts import Font, FontWeight
 
 from linktree_dai.components.header.links_icons import links
 
-from linktree_dai.constants import DAI_WEB_URL, DAI_INSTAGRAM_URL, DAI_TWITTER_URL, DAI_MAIL_URL, DAI_WHATSAPP_URL
 
 def header():
     return rx.vstack(

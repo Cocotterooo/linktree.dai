@@ -17,7 +17,6 @@ def logo() -> rx.components:
                 font_size= Size.MEDIUM.value,
                 font_weight= '600',
                 font_family= Font.TITLE.value,
-                color= TextColor.PRIMARY.value,
                 line_height= '25px',
                 width= '250px'
             ),
