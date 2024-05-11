@@ -2,9 +2,14 @@ import reflex as rx
 
 class IndexState(rx.State):
     light_mode: bool = True
+    first_load: bool = True
+
+    def on_load(self):  # Método para ser llamado en el evento on_load
+        self.first_load = False  # Actualizar el indicador de primera carga
 
     def toggle_theme(self):
-        self.light_mode = not self.light_mode
+        if not self.first_load:
+            self.light_mode = not self.light_mode
 
     @rx.var
     def primary_color(self) -> str:

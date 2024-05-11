@@ -19,7 +19,7 @@ from linktree_dai.pages.index.index_state import IndexState
     title= INDEX_TITLE,
     description= INDEX_DESCRIPTION,
     image= PREVIEW,
-    on_load= IndexState.toggle_theme,
+    on_load= IndexState.on_load,
 )
 def index() -> rx.Component:
     return rx.box(

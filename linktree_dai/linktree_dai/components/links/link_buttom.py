@@ -17,6 +17,7 @@ def link_buttom(data:dict) -> rx.components:
                 alt= data.alt,
                 height= '50px',
                 width= '50px',
+                margin_right= Size.SMALL.value,
             ),
             rx.vstack(
                 rx.text(

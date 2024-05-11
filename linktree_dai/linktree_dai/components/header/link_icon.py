@@ -12,13 +12,12 @@ def link_icon(*, light_icon: str, dark_icon, alt:str, href: str, is_external: bo
             rx.image(
                 src= rx.cond(
                     IndexState.light_mode,
-                    dark_icon,
-                    light_icon
+                    light_icon,
+                    dark_icon
                 ),
                 alt= alt,
                 height= '17px',
-                width= '17px',
-                padding_right= Size.DEFAULT.value,
+                width= '17px'
             ),
             while_hover={"scale": 1.2},
             transition={"duration": 0.2},
