@@ -19,7 +19,11 @@ def header():
             ),
             rx.vstack(
                 rx.heading(
-                    'Delegación de Alumnos de Industriales',
+                    rx.cond(
+                        IndexState.lang_mode,
+                        'Delegación de Alumnos de Industriales',
+                        'Delegación do Alumnado de Industriais'
+                    )
                 ),
                 rx.text(
                     '@dai_uvigo',
@@ -43,9 +47,15 @@ def header():
             width='100%'
         ),
         rx.text(
-            '''La Delegación de Alumnos es el máximo órgano de representación
-            estudiantil de la Escuela de Ingeniería Industrial. Somos un órgano
-            oficial de la Universidad de Vigo formado por estudiantes.''',
+            rx.cond(
+                IndexState.lang_mode,
+                '''La Delegación de Alumnos es el máximo órgano de representación
+                estudiantil de la Escuela de Ingeniería Industrial. Somos un órgano
+                oficial de la Universidad de Vigo formado por estudiantes.''',
+                '''A delegación de estudantes é o máximo órgano de representación
+                estudantil da Escola de Enxeñaría Industrial. Somos un órgano
+                oficial da Universidade de Vigo formado por estudantes.''',
+            )
         ),
         padding_y= Size.MEDIUM_BIG.value,
     )

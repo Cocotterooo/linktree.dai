@@ -1,9 +1,10 @@
 import reflex as rx
 
+# Components:
 from linktree_dai.components.links.link_buttom import link_buttom
-
+# Data:
 from linktree_dai.data.LinkData import LinkData
-
+# Styles:
 from linktree_dai.styles.styles import Size
 
 def links_column(links: list[LinkData]) -> rx.Component:

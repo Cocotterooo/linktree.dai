@@ -13,19 +13,31 @@ def link_buttom(data:dict) -> rx.components:
                     data.dark_icon,
                     data.light_icon
                 ),
-                alt= data.alt,
+                alt= rx.cond(
+                    IndexState.lang_mode,
+                    data.alt_es,
+                    data.alt_gl
+                ),
                 height= '50px',
                 width= '50px',
                 margin_right= Size.SMALL.value,
             ),
             rx.vstack(
                 rx.text(
-                    data.title,
+                    rx.cond(
+                        IndexState.lang_mode,
+                        data.title_es,
+                        data.title_gl
+                    ),
                     font_size= '18px',
                     font_weight= '600',
                 ),
                 rx.text(
-                    data.description,
+                    rx.cond(
+                        IndexState.lang_mode,
+                        data.description_es,
+                        data.description_gl
+                    ),
                     font_size= '13px',
                 ),
                 spacing= '0',
@@ -38,7 +50,11 @@ def link_buttom(data:dict) -> rx.components:
                         '/icons/blue/arrow_up_right.svg',
                         '/icons/white/arrow_up_right.svg'
                     ),
-                    alt= 'Flecha inclinada hacia arrioba a la derecha',
+                    alt= rx.cond(
+                        IndexState.lang_mode,
+                        'Flecha inclinada hacia arrioba a la derecha (da a entender que es para acceder a la página web)',
+                        'Frecha inclinada cara arriba á dereita (da a entender que é para acceder o sitio web)'
+                    ),
                     class_name= 'arrow',
                 ),
                 padding_right= Size.SMALL.value,
