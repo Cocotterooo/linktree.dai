@@ -11,6 +11,7 @@ class LinkData:
             url: str,
             is_external: bool,
             is_social_media: bool = False,
+            is_contact: bool = False,
             is_active: bool = False
         ):
         self.title = title
@@ -21,6 +22,7 @@ class LinkData:
         self.url = url
         self.is_external = is_external
         self.is_social_media = is_social_media
+        self.is_contact = is_contact
         self.is_active = is_active
 
 with open('assets/data//links.json', 'r') as archivo:
@@ -37,6 +39,7 @@ links_references = [
         item['url'],
         item['is_external'],
         item['is_social_media'],
+        item['is_contact'],
         item['is_active']
     )
     for item in links

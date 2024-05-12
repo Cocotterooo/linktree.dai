@@ -8,6 +8,7 @@
         "url": "https://dai.uvigo.gal",
         "is_external": true,
         "is_social_media": false,
+        "is_contact": false,
         "is_active": true
     },
     {
@@ -19,6 +20,7 @@
         "url": "https://www.instagram.com/dai_uvigo",
         "is_external": true,
         "is_social_media": true,
+        "is_contact": false,
         "is_active": true
     },
     {
@@ -30,6 +32,31 @@
         "url": "https://twitter.com/dai_uvigo",
         "is_external": true,
         "is_social_media": true,
+        "is_contact": false,
         "is_active": true
+    },
+    {
+        "title": "Gmail",
+        "description": "Envíanos un correo electrónico a delegacion@dai.uvigo.gal",
+        "light_icon": "/icons/white/social/email.svg",
+        "dark_icon": "/icons/blue/social/email.svg",
+        "alt": "Icono de un Sobre",
+        "url": "mailto:delegacion@dai.uvigo.gal",
+        "is_external": true,
+        "is_social_media": false,
+        "is_contact": true,
+        "is_active": false
+    },
+    {
+        "title": "WhatsApp",
+        "description": "Envíanos un WhatsApp",
+        "light_icon": "/icons/white/social/whatsapp.svg",
+        "dark_icon": "/icons/blue/social/whatsapp.svg",
+        "alt": "Logotipo de WhatsApp",
+        "url": "https://wa.me/+34986813656",
+        "is_external": true,
+        "is_social_media": false,
+        "is_contact": true,
+        "is_active": false
     }
 ]

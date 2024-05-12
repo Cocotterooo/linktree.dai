@@ -8,18 +8,37 @@ from linktree_dai.styles.styles import Size
 
 def links_column(links: list[LinkData]) -> rx.Component:
     return rx.vstack(
+        # GENERAL SECTION:
         *[
             link_buttom(data)
-            for data in links if not data.is_social_media and data.is_active
+            for data in links if not data.is_social_media and not data.is_contact and data.is_active
         ],
-        rx.heading(
-            'Redes Sociales',
-            margin_top= Size.MEDIUM.value,
+        # SOCIAL MEDIA SECTION:
+        rx.cond(
+            len([data for data in links if data.is_social_media and data.is_active]) > 0,
+            rx.vstack(
+                rx.heading('Redes Sociales'),
+                *[
+                    link_buttom(data)
+                    for data in links if data.is_social_media and data.is_active
+                ],
+                margin_top= Size.MEDIUM.value,
+                width= '100%'
+            )
         ),
-        *[
-            link_buttom(data)
-            for data in links if data.is_social_media and data.is_active
-        ],
+        # CONTACT SECTION:
+        rx.cond(
+            len([data for data in links if data.is_contact and data.is_active]) > 0,
+            rx.vstack(
+                rx.heading('Contacto'),
+                *[
+                    link_buttom(data)
+                    for data in links if data.is_contact and data.is_active
+                ],
+                margin_top= Size.MEDIUM.value,
+                width='100%'
+            )
+        ),
         spacing='3',
         width='100%'
     )

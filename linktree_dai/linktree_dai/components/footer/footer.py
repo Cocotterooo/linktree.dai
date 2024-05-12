@@ -37,19 +37,21 @@ def footer():
                 ),
                 rx.text(
                     'Delegación de Alumnos de Industriales',
+                    text_align='center'
                 ),
                 rx.text(
                     ' v1',
                     color= IndexState.accent_color,
                 ),
                 color= IndexState.primary_color,
+                align= 'center'
             ),
             href= GITHUB_REPO_URL,
-            is_external=True,
-            class_name='link',
+            is_external= True,
+            class_name='link'
         ),
-        align='center',
-        width='100%',
+        align= 'center',
+        width= '100%',
         padding_bottom= Size.DEFAULT.value,
-        padding_top= Size.LARGE.value,
+        padding_top= Size.LARGE.value
     )
