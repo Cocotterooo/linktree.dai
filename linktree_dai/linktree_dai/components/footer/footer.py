@@ -36,7 +36,11 @@ def footer():
                     src='/icons/white/social/github.svg',
                 ),
                 rx.text(
-                    'Delegación de Alumnos de Industriales',
+                    rx.cond(
+                        IndexState.lang_mode,
+                        'Delegación de Alumnos de Industriales',
+                        'Delegación do Alumnado de Industriais'
+                    ),
                     text_align='center'
                 ),
                 rx.text(
