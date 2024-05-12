@@ -63,6 +63,7 @@ def link_buttom(data:dict) -> rx.components:
             padding= Size.SMALL.value,
             border_radius= Size.DEFAULT.value,
             border= f'2px solid {IndexState.accent_color}',
+            box_shadow= '0 0 5px rgba(0,0,0,0.25)',
             color= IndexState.primary_color,
             _hover= {
                 'bg': IndexState.accent_color,

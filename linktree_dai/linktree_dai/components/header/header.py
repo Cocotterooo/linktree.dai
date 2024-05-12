@@ -16,6 +16,7 @@ def header():
                 size='8',
                 border_radius='100%',
                 border= f'4px solid {IndexState.accent_color}',
+                box_shadow= '0 0 7px rgba(0,0,0,0.27)'
             ),
             rx.vstack(
                 rx.heading(

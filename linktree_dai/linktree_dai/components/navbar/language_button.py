@@ -37,5 +37,6 @@ def language_button():
         height= '40px',
         width= '40px',
         padding= '0px',
+        box_shadow= '0 0 5px rgba(0,0,0,0.25)',
         on_click= IndexState.toggle_language,
     )
