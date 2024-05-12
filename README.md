@@ -7,33 +7,38 @@
 
 ## Proyecto Linktree de la Delegación de Alumnos de la Escuela de Ingeniería Industrial (UVigo)
 ### Modo Claro
-![image](https://github.com/Cocotterooo/linktree.dai/assets/103317717/1c5b44ca-59ce-4d76-a9a2-169ef268d8b1)
+![image](https://github.com/Cocotterooo/linktree.dai/assets/103317717/2d0b2315-1d2f-4c45-bb46-9c869866882d)
+
 ### Modo Oscuro
-![image](https://github.com/Cocotterooo/linktree.dai/assets/103317717/552a8e8a-b689-4cc4-8686-e94f83ab9d7b)
+![image](https://github.com/Cocotterooo/linktree.dai/assets/103317717/cacb579b-e1c6-42fd-8b83-6529947ef67f)
+
 
 ## Añadir nuevos enlaces:
 para añadir nuevos enlaces al linktree solo hay que ir a `linktree_dai > assets > data > links.json`, 
 una vez ahí añade rellena sus propiedades.
 ```json
 {
-    "title": "Nuestra Web",
-    "description": "Servicios e información útil para los estudiantes.",
+    "title_es": "Nuestra Web",
+    "title_gl": "A nosa Web",
+    "description_es": "Servicios e información útil para los estudiantes.",
+    "description_gl": "Servizos e información útil para os estudantes.",
     "light_icon": "/icons/white/social/web.svg",
     "dark_icon": "/icons/blue/social/web.svg",
-    "alt": "Logotipo de Aplicación Web",
+    "alt_es": "Logotipo de Aplicación Web",
+    "alt_gl": "Logotipo dunha páxina web",
     "url": "https://dai.uvigo.gal",
     "is_external": true,
     "is_social_media": false,
+    "is_contact": false,
     "is_active": true
 }
 ```
 > **PROPIEDADES:**
-> > title -> Título del enlace que aparecerá en la app.
+> > title es/gl -> Título del enlace que aparecerá en la app. (Ambos Idiomas)
 > >
-> > description -> Descripción del enlace que aparecerá en la app.
+> > description es/gl -> Descripción del enlace que aparecerá en la app. (Ambos Idiomas)
 > >
-> >
-> > alt -> Descripción breve del icono para la accesibilidad.
+> > alt es/gl -> Descripción breve del icono para la accesibilidad. (Ambos Idiomas)
 > >
 > > light_icon / dark_icon -> Direcciones a los iconos para el modo oscuro y el modo claro.
 > >
@@ -45,10 +50,13 @@ una vez ahí añade rellena sus propiedades.
 > > 
 > > is_active -> Se necesita un valor True para que el enlace se renderice en la web.
 
-> [!NOTE]
+> [!TIP]
 > El orden de aparición de los links se corresponte con el orden dentro del archivo .json
 
 ## ¿Cómo hostear el sitio web?
 En este caso se ha utilizado una instancia de pterodactil originalmente.
-
 [Para ello puedes encontrár aquí la información](https://github.com/Cocotterooo/docker-pterodactyl-reflex)
+
+
+> [!NOTE]
+> El opción de cambio de idioma entre castellano y gallego está pendiende de mejora para tener ambos idiomas en un archivo separado para su fácil manipulación.
